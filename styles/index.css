@@ -1,0 +1,515 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    --navBarColor: rgb(20,44,83);
+    --deepBlue: rgb(23, 23, 23);
+    --goldenLine: rgb(153,108,64);
+    --testWhiteB: rgba(241,241,241,255);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/*-----------------scrollBar------------------*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(212, 212, 212);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--goldenLine);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--navBarColor);
+  }
+
+/*--------------------------NavBar---------------------------*/
+
+.navBar{
+    position: fixed;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    z-index: 99;
+    background-color: var(--navBarColor);
+    border-bottom : 2px solid var(--goldenLine);
+}
+
+.navOpt{
+    color: white;
+    margin-left: 15px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.agentName{
+    color: white;
+    letter-spacing: 5px;
+    font-weight: 100;
+    font-size: 35px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/*------------------------Banner-----------------------*/
+
+#myVideo {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    color: #ffffff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 64, 59, 0.49);
+    mix-blend-mode: overlay;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+}
+
+.text{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.pageTitle{
+    font-size: 90px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.pageSubtitle{
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    font-weight: 1000;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 50px;
+}
+
+.bannerScrollDown {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    bottom: 32px;
+    align-items: center;
+    text-decoration: none;
+    transition: bottom 0.2s ease;
+    z-index: 50;
+}
+
+.scrollDownText{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.bannerScrollDown:hover {
+    bottom: 40px;
+}
+
+.bannerScrollDownIcon {
+    width: 19px;
+    margin: 0 auto;
+}
+
+.fadeIn{
+    animation: fadeIn 4s;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+/*--------------------------contactUs--------------------------------*/
+
+.contactUs{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--deepBlue);
+    z-index: 60;
+    border-top : 2px solid var(--goldenLine);
+}
+
+.contactUsText{
+    color: white;
+    font-size: 37px;
+    width: 25%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+
+.contactUsButton{
+    position: relative;
+    color: white;
+    font-size: 21px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 3px;
+    border: 2px solid var(--goldenLine);
+    bottom: 0px;
+    padding: 6px 10px;
+    transition: padding 0.2s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contactUsButton:hover{
+    padding: 10px 14px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border:none;
+    font-weight: 600;
+    font-size: 23px;
+}
+
+.buttonCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17%;
+    height: 55px;
+}
+
+/*-----------------------------WhyYouShouldHire----------------------------------*/
+
+.wysh{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 550px;
+    align-items: center;
+    justify-content: center;
+}
+
+#miamiHouse{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+.wyshSaturation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffffffc0;
+    mix-blend-mode: saturation;
+}
+
+.overlayWysh{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffffffad;
+}
+
+.contentWysh{
+    position: absolute;
+    display: inline-flex;
+    max-width: 1400px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.headingSection{
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.paragraphSection{
+    margin-top: 40px;
+    font-size: 23px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 27px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ------------------------- -------------------------------*/
+
+.mediaAndTextContainerRToHire{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+/*----------------------------reasonsToHireBlackBackground---------------------------*/
+
+.rToHireBB{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--deepBlue);
+}
+
+.mediaRToHire{
+    width: 30%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.contentRToHire{
+    width: 30%;
+}
+
+.headingRToHireBB{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.paragraphRToHireBB{
+    text-align: justify;
+    color: white;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*----------------------------reasonsToHireWhiteBackground----------------------*/
+
+.rToHireWB{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--testWhiteB);
+}
+
+.headingRToHireWB{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.paragraphRToHireWB{
+    text-align: justify;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+.goldenBorder{
+    border: 4px solid var(--goldenLine);
+}
+
+/*----------------------------dividingLine----------------------*/
+
+.dLineBB{
+    width: 100%;
+    background-color: var(--deepBlue);
+}
+
+.dLineWB{
+    width: 100%;
+    background-color: var(--testWhiteB);
+}
+
+.hrWB{
+    display: block;
+    border: 1px solid var(--goldenLine);
+    width: 50%;
+    margin: auto;
+}
+
+/*----------------------------contactUsBottom----------------------*/
+
+
+.contactBottom{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    z-index: 63;
+}
+
+#contactBottomImage{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: 0 100%;
+}
+
+.contentContactBottom{
+    display: flex;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.contactBottomHeading{
+    color: white;
+    font-size: 37px;
+    width: 80%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contactBottomParagraph{
+    max-width: 80%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contactButtonBottom{
+    position: relative;
+    color: white;
+    font-size: 21px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    border: 3px solid white;
+    bottom: 0px;
+    padding: 6px 10px;
+    transition: padding 0.2s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contactButtonBottom:hover{
+    padding: 10px 14px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border:none;
+    font-weight: 600;
+    font-size: 23px;
+}
+
+.buttonContBottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 55px;
+}
+
+/*----------------CONTACT INFO------------------*/
+
+.contactInfo{
+    width: 100%;
+    height: 500px;
+    background-color: var(--navBarColor);
+    border-top: 3px solid var(--goldenLine);
+}
+
+.contactInfoContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cILeft{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.cIHeading{
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 5px;
+    font-size: 30px;
+    text-align: left;
+    color: white;
+}
+
+.cISubHeading{
+    color: white;
+    font-family: 'Montserrat', 'sans-serif';
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.cIRight{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.contactText{
+    color: white;
+    font-family: 'Montserrat', 'sans-serif';
+    letter-spacing: 2px;
+}
+
+.contactCategory{
+    display: flex;
+    align-items: center;
+}
+
+.contactCategIcon{
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+}
